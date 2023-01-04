@@ -15,7 +15,7 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 
 ### **Introduction**
 
-&emsp;The purpose of Module 1 is to introduce the concept of cloud computing
+&emsp;The purpose of Module 1 is to introduce the concept of cloud computing. Meaning that Cloud Computing is another step towards computing as a service.
 
 ### **The client-server model**
 
@@ -51,28 +51,148 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 &emsp;By taking a cloud computing approach that offers the benefit of variable expense, companies can implement innovative solutions while saving on costs. </br>
 
 - Stop Spending Money to run and maintain data centers: </br>
-&emsp;As said before, when using cloud-computing to store data, the client do not need to worry about maintaining a whole data center working. In this way, being able to focus on what really matters. </br>
+&emsp;As said before, when using cloud-computing to store data, the client do not need to worry about maintaining a whole data center working. In this way, being able to focus on what really matters.</br>
 
 - Stop Guessing capacity:</br>
-&emsp; With cloud computing, you don’t have to predict how much infrastructure capacity you will need before deploying an application.</br>
+&emsp;With cloud computing, you don’t have to predict how much infrastructure capacity you will need before deploying an application.</br>
 
 - Benefit from massive economies of scale:</br>
-&emsp; Due to the usage from hundreds of thousands of customers, cloud-computing became cheaper then on-premises deployment. Therefore, AWS cloud services can achieve higher economies of scale.</br>
+&emsp;Due to the usage from hundreds of thousands of customers, cloud-computing became cheaper then on-premises deployment. Therefore, AWS cloud services can achieve higher economies of scale.</br>
 
 - Increase speed and agility:</br>
 &emsp;The flexibility of cloud computing makes it easier for you to develop and deploy applications. By comparison, cloud computing enables you to access new resources within minutes.</br>
 
 - Go global in minutes:</br>
-&emsp; You can use AWS global infrastructure to deploy your cloud-based application in all local in the world, with low latency and just some clicks.</br>
+&emsp;You can use AWS global infrastructure to deploy your cloud-based application in all local in the world, with low latency and just some clicks.</br>
 
 ---
 
-## **Module 2**
+## **Module 2 - Amazon Elastic Compute Cloud (Amazon EC2)**
 
-### Introduction -
+### **Introduction**
+
+&emsp;Amazon Elastic Compute Cloud (Amazon EC2) is a core part of the cloud computing platform. Amazon EC2 enables you to launch, connect and then use cloud instances at AWS servers. Its also good to mention, that EC2 works based on Containers as a Service (CaaS) concepts.</br>
+&emsp;EC2 is the part AWS cloud computing platform that allows you to use resource vertical scaling, It means that you get more CPU and memory for your instance with a few clicks. It means that a Hypervisor<sup>[2]</sup> at AWS servers controls with virtualization technologies (Virtual Machines) how many resources your instance will consume.</br>
+&emsp;You can run multiples instances with EC2, sharing the same resources running different things, like Windows, linux, databases etc. This concept is called Multitenancy.</br>
+&emsp;Its important to know that each EC2 instance does not know that the other exist, they are isolated from other instances.</br>
+&emsp;Furthermore you can also determine networking aspects of your instance like types of request or  accessibility configuration.</br>
+
+### **EC2 Instance Types**
+
+&emsp;Starting from the principle that EC2 instances can be used to various purposes, Amazon developers created various instance types, that can more suitable for each situation. There are 5 instances types:</br>
+
+- General purpose instance:</br>
+&emsp;Offers a balance of compute, memory, and networking resources.</br>
+
+- Compute optimized instances: </br>
+&emsp;Focus on high-performance processing such as applications, gaming and web servers. It also can be used for batch processing workloads that require processing many transactions in a single group.</br>
+
+- Memory optimized instances:</br>
+&emsp;They are designed to deliver fast performance for workloads that process large datasets in memory. As a consequence, its also used at high-performance databases or when you have workloads that involves performing real-time processing of a large amount of unstructured data.</br>
+
+- Accelerate computing instances:</br>
+&emsp;Accelerated computing instances use hardware accelerators, or coprocessors, to perform some functions more efficiently than is possible in software running on CPUs. Examples of these functions include floating-point number calculations, graphics processing, and data pattern matching.
+</br>
+
+- Storage optimized instances:</br>
+&emsp;Storage optimized instances are designed for workloads that require high, sequential read and write access to large datasets on local storage. Examples of workloads suitable for storage optimized instances include distributed file systems, data warehousing applications, and high-frequency online transaction processing (OLTP) systems.</br>
+&emsp;In computing, the term input/output operations per second (IOPS) is a metric that measures the performance of a storage device. It indicates how many different input or output operations a device can perform in one second. Storage optimized instances are designed to deliver tens of thousands of low-latency, random IOPS to applications. </br>
+
+### **Amazon EC2 pricing**
+
+&emsp;There are several ways to price EC2 instance uses.</br>
+
+- On-Demand:</br>
+&emsp;They are ideal for short-term, irregular workloads that cannot be interrupted. No upfront costs or minimum contracts apply.The instances run continuously until you stop them, and you pay for only the compute time and resources that you use. Ideal for entrance on AWS cloud computing.</br>
+
+- Amazon EC2 Savings Plans:</br>
+&emsp;This type of pricing is really useful when having a consistent amount of compute usage for 1-year or 3-year. Those are just the two kinds of plans existent in Amazon EC2 Savings Plans, this term commitment results in savings of up to 72% over On-Demand costs. </br>
+&emsp;Any usage up to the commitment is charged at the discounted Savings Plan rate (for example, $10 an hour). Any usage beyond the commitment is charged at regular On-Demand rates.</br>
+
+- Reserved Instances:</br>
+&emsp;Reserved Instances are a billing discount, based on plans, applied to the use of On-Demand Instances in your account. It means that all On-demand instance you're gonna launch in a pre-determined time are gonna be cheeper.</br>
+
+- Spot Instances:</br>
+&emsp;Its a cheap alternative, although an Spot Instance, if capacity is no longer available or demand for Spot Instances increases, your instance may be interrupted or not even launched at all.</br>  
+
+- Dedicated Hosts:</br>
+&emsp;They are are physical servers with Amazon EC2 instance capacity that is fully dedicated to your use.</br>
+
+### **Scaling Amazon EC2**
+
+&emsp;EC2 counts with Auto Scaling feature. Auto Scaling is the feature that allow you to get more resources or more instances as you need. It means that you gonna get what you need from AWS infrastructure when you need, and pay only for it.</br>
+&emsp;Scalability is the key concept after Auto Scaling, and involves beginning with only the resources you need and designing your architecture to automatically respond to changing demand by scaling out or in.</br>
+
+### **Amazon EC2 Auto Scaling**
+
+&emsp;The Amazon EC2 Auto Scaling is a powerful tool when you need to change your amount of compute usage along some period of time. This tool enable you to automatically add or remove Amazon EC2 instances in response to changing application demand. By automatically scaling your instances in and out as needed, you are able to maintain a greater sense of application availability. Within Amazon EC2 Auto Scaling, you can use two approaches: dynamic scaling and predictive scaling. </br>
+
+- Dynamic scaling responds to changing demand.
+- Predictive scaling automatically schedules the right number of Amazon EC2 instances based on predicted demand. </br>
+
+> To scale faster, you can use dynamic scaling and predictive scaling together. </br>
+
+#### **How it works?**
+
+&emsp; First, you need to set up an auto scaling group. Then define the minimum number for EC2 instances, they are gonna launch as soon you create a auto scaling group. You want this number to be the minimum instances that your application needs to function.</br>
+&emsp; Next, define de desired instance numbers, this number represents the number of instances that your application needs to function properly.</br>
+&emsp; If you do not specify the desired number of Amazon EC2 instances in an Auto Scaling group, the desired capacity defaults to your minimum capacity.</br>
+&emsp; At last, you can also define the maximum EC2 instances that your auto scaling group can launch.</br>
+
+### **Elastic Load Balancing**
+
+&emsp;Elastic Load Balancing is another feature that helps in traffic management between requests and instances.</br>
+&emsp;This feature is responsible to balance the workload between all the running instances, this way you can guarantee that all instances have the same workload, so no instance has to carry the bulk of it.</br>
+&emsp;Although Elastic Load Balancing and Amazon EC2 Auto Scaling are separate services, they work together to ensure efficiency. It means that when a new instance is launched or terminated, the auto scaling warns elastic load balancer, so he can re-balance the workload between all running instances.</br>
+&emsp;Another Elastic Load Balancing advantage is that it acts as a single point of contact for all incoming web traffic to your Auto Scaling group. So each request doesn't need to know witch AWS instance is online.</br>
+
+### **Messaging and queuing**
+
+&emsp;Sometimes, there might be some troubles between receive requests and process then. This might occur because when the request arrived, an EC2 instance might be occupied processing other request. In Monolithic systems, the request is going to be lost or the system would fail. Thats why AWS works with low cohesion systems, like microservers.</br>
+
+#### **Monolithic applications and microservices**
+
+&emsp;The concept of an monolithic application is having all components the application needs to function together, those components might include databases, servers, the user interface, business logic, and so on. In this approach to application architecture, if a single component fails, other components fail, and possibly the entire application fails.</br>
+&emsp;Otherwise, monolithic concept is the opposite of microservices, while the first is based on only one system with all components working together, the last one is focused on having the minimum amount of components together, and maximize the modularization. </br>
+&emsp;For a microservices works properly is necessary, first of all, communication between the singular systems (components). It is simple to understand that when you have all components together the communication between each component is easier, but when you go for microservices, this became, at the same time, the problem and the solving of your situation. This occurs because the message trading is crucial to make the microservice a better way to maintain a big system, but at other side is the difficulty when using this kinda system.</br>
+
+#### **Managing Messages**
+
+&emsp;As a solution to managing messages between requests managers and system instances, AWS provide two services for managing messages: Amazon Simple Notification Service (Amazon SNS) and Amazon Simple Queue Service (Amazon SQS).</br>
+&emsp;SNS is a feature based on subscribe and publisher, in this manner a publisher can publish a message at a topic (witch is a channel for a type of messages), and afterwards all subscribers that are attached to that topic will be notified with the new message. If a publisher wants to send another message, he can publish again at the same topic.</br>
+&emsp;SQS works as a simple queue-like buffer, that requests can be lined up and be processed according to system capacity.</br>
+
+### **Additional compute services**
+
+#### **Serverless computing**
+
+&emsp;The term “serverless” means that your code runs on servers, but you do not need to provision or manage these servers. With serverless computing, you can focus more on innovating new products and features instead of maintaining servers.</br>
+&emsp;The main thing about serverless computing is the scalability and capacity of adjusting the applications needing according to the time.</br>
+
+#### **AWS Lambda**
+
+&emsp;AWS Lambda is a serverless service to run codes in the cloud. Its designed for quick process, up to fifteen minutes.</br>
+&emsp;It works based on trigger systems. When you upload code, you will also set up a trigger based on event sources, then, when the trigger is activated the code runs automatically,all with zero administration.</br>
+
+#### **Containers**
+
+&emsp;Containers provide you with a standard way to package your application's code and dependencies into a single object. This manner of sharing environment is quick and simple, saving much time and patience. </br>
+&emsp;A simple way to understand the importance of containers is imagining that two teams want to share their applications, but team A has different environment than team B, so to A's application work, B need's to install all A's dependencies and softwares, check their versions and in worst cases, uninstall other versions installed on B's. All this process can cost many time and is open to many mistakes, so been able to avoid them using containers is a cool solution. </br>
+
+#### **Containers Orchestration**
+
+&emsp;You can run Containers inside AWS instances, and when having a lot of instances, with a lot of containers, you need to manage containers inside the instances. You can orchestrate then manually, but its very complex and laborious. So AWS prepared two services for containers orchestration in cloud: Amazon Elastic Container Service (Amazon ECS) and Amazon Elastic Kubernetes Service (Amazon EKS).,</br>
+&emsp;With Amazon ECS you can run and scale containerized applications on AWS and use ECS's API that calls to launch and stop Docker-enabled applications.</br>
+&emsp;With Amazon EKS you can run and scale containerized applications on AWS and use EKS's API that calls to launch and stop Kubernetes-enabled applications.</br>
+
+#### **AWS Fargate**
+
+&emsp;AWS Fargate compute engine for containers service type. When you are going to use containers at your instance, you can use EC2 and manually manage your instances or you can let Fargate takes on that responsibility for you, meaning its a serverless service. </br>
 
 ---
 
 ## **References**
 
-https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials?src=detail2</br>
+1. <https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials?src=detail2>
+
+2. <https://www.youtube.com/watch?v=FZR0rG3HKIk&ab_channel=IBMTechnology>
