@@ -10,6 +10,21 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 - [Orlando Mota Pires](https://github.com/orlandomotapires)
 
 ---
+## Summary
+
+[- Module 1 - Introduction to Amazon Web Services](#module-1---introduction-to-amazon-web-services)</br>
+[- Module 2 - Compute in the cloud](#module-2---amazon-elastic-compute-cloud-amazon-ec2)</br>
+[- Module 3 - Global Infrastructure and Reliability](#module-3---global-infrastructure-and-reliability)</br>
+[- Module 4](#) NOT DONE</br>
+[- Module 5](#) NOT DONE</br>
+[- Module 6](#) NOT DONE</br>
+[- Module 7](#) NOT DONE</br>
+[- Module 8](#) NOT DONE</br>
+[- Module 9](#) NOT DONE</br>
+[- Module 10](#) NOT DONE</br>
+[- Module 11](#) NOT DONE</br>
+
+---
 
 ## **Module 1 - Introduction to Amazon Web Services**
 
@@ -23,7 +38,7 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 
 ### **Cloud Computing**
 
-&emsp;A short definition could be "The on-demand delivery of IT resources over the internet with pay-as-you-go pricing", the concept of cloud computing is the idea of heaving a independent server to store all the data a client would ever need. The main thing about cloud is the fact the client do not need to worry about having to deal with having a big room to store all the server machines and a whole IT team to manage them.</br>
+&emsp;A short definition could be "The on-demand delivery of IT resources over the internet with pay-as-you-go pricing", the concept of cloud computing is the idea of heaving a independent server to store all the data a client would ever need. The main thing about cloud is the fact the client do not need to worry about having to deal with having a big room to store all the server machines and a whole IT team to manage them.</b>
 &emsp;As well, the client only pays for the resources that he is using, when he is using, it means in the moment that he stops, he is not going to pay for it. </br>
 &emsp;In general, when a client needs to store some data it is just necessary that the buy the amount of space he need at that moment and that is it, no need to worry about guessing the space it is going to be necessary on the future. </br>
 &emsp;Lastly, the most beautiful thing about cloud-computing is the flexibility. While a client need, for example, a hundred servers, he can continue using it until he do not need then anymore, so he can just press a few clicks and return then to AWS, not needing to pay for them anymore. The other side can also happen, if the client need more servers he can just start using them without needing to warn the server-side before.
@@ -128,7 +143,7 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 &emsp;The Amazon EC2 Auto Scaling is a powerful tool when you need to change your amount of compute usage along some period of time. This tool enable you to automatically add or remove Amazon EC2 instances in response to changing application demand. By automatically scaling your instances in and out as needed, you are able to maintain a greater sense of application availability. Within Amazon EC2 Auto Scaling, you can use two approaches: dynamic scaling and predictive scaling. </br>
 
 - Dynamic scaling responds to changing demand.
-- Predictive scaling automatically schedules the right number of Amazon EC2 instances based on predicted demand. </br>
+- Predictive scaling automatically schedules the right number of Amazon EC2 instances based on predicted demand.
 
 > To scale faster, you can use dynamic scaling and predictive scaling together. </br>
 
@@ -188,6 +203,71 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 #### **AWS Fargate**
 
 &emsp;AWS Fargate compute engine for containers service type. When you are going to use containers at your instance, you can use EC2 and manually manage your instances or you can let Fargate takes on that responsibility for you, meaning its a serverless service. </br>
+
+---
+
+## **Module 3 - Global Infrastructure and Reliability**
+
+### **Introduction**
+
+&emsp;AWS cloud computing services counts on a global infrastructure, with multiple server and data centers around the world. It is important for security and reliability.</br>
+&emsp;If one AWS data center shuts downs for any reason, costumers applications won't stop working because they can host the same applications  at other data centers with different EC2 instances.</br>
+&emsp;As well, if a costumer wants to host their application in another local of the planet to ensure low latency they can.</br>
+
+### **AWS Regions**
+
+&emsp;In AWS, a Region is a geographical area that contains AWS resources, this resources can be the availability zone.</br>
+&emsp;When selecting a region its important you should remember:</br>
+
+- Compliance:</br>
+&emsp;When looking at cloud computing, there is a lot of rules and regiments that must be followed to set your application in a server, those therms are part of the Compliance of that region. For example, if you want to set your application in São Paulo, Brazil, you need to follow the Compliance of the São Paulo boundaries.</br>
+
+- Proximity to Costumers:</br>
+&emsp;You need to Select a region that is close to your costumers, that way, you will host your application with lower latency.</br>
+
+- Available Services within a Region:</br>
+&emsp;When AWS has something new to implements, they do it by parts. That way, some regions might have some services that others don't.</br>
+
+- Pricing:</br>
+&emsp;Some regions are more expensive then others, taxes at Brazil make it more costly to install the same Infrastructure compared to other places. </br>
+
+### **Availability Zones**
+
+&emsp;An Availability Zone is a single data center or a group of data centers, they are like subdivisions inside the regions.</br>
+&emsp;Availability Zones are located tens of miles apart from each other. This is close enough to have low latency between Availability Zones. However, if a disaster occurs in one part of the Region, they are distant enough to reduce the chance that multiple Availability Zones are affected.</br>
+&emsp;Its always important to run your application in multiple availability zones, far from each other, using more then on EC2 instance. So when something happens, you an count on another server, located in another building.</br>
+
+### **Amazon Cloudfront**
+
+&emsp;AWS also counts with a CDN service called Amazon Cloundfront they are based on Edge locations to delivery a low latency communication between two distant client and server.</br>
+&emsp;The idea behind edge locations is to cache information from distance places. So, when someone needs to access data from an server that is too far, they can just request for the cached information on the edge locations.</br>
+
+### **Amazon Route 53**
+
+&emsp;Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. Route 53 connects user requests to Internet applications running on AWS or on-premises.</br>
+
+### **AWS OutPosts**
+
+&emsp;AWS can also use AWS OutPosts to get AWS inside you business building. It means the AWS will install a new mini regions inside you business, to fulfill special needs that you might need. Using this tool AWS has completely operational control and hundred percent of AWS features will be available.</br>
+
+### **Ways to interact with AWS services**
+
+- AWS Management Console:</br>
+&emsp;It is the API used  to interact with AWS services with visual assistance.</br>
+
+- AWS Command Line:</br>
+&emsp;It is the API used as a way to interact with AWS services with command line, in terminal. Good for automation with scripts.</br>
+
+- AWS Software Development Kits:</br>
+&emsp;It is the API used as a way to interact with AWS services with programing languages. AWS provides documentation and sample code for each supported programming language.</br>
+
+### **AWS Elastic Beanstalk**
+
+&emsp;With AWS Elastic Beanstalk, you provide configuration settings. In this way, Elastic Beanstalk do all the work for you, calling the respective API's to build the desired cloud ambient, facilitating launching your application..</br>
+
+### **AWS CloudFormation**
+
+&emsp;With AWS CloudFormation you can use pre-determined templates to build an environment by writing lines of code instead of using the AWS Management Console. In this manner, you can treat your infrastructure as code by using tools as json's to describe your infrastructure in a declarative manner. </br>
 
 ---
 
