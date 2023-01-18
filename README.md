@@ -4,17 +4,16 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 
 ## Authors
 
-- [Adrian Widmer](https://github.com/Awi-24)
-- [Antonio Horácio Magalhaes](https://github.com/antoniohoracio77)
 - [Fernando Antonio Marques Schettini](https://github.com/FernandoSchett)
 - [Orlando Mota Pires](https://github.com/orlandomotapires)
 
 ---
+
 ## Summary
 
-[- Module 1 - Introduction to Amazon Web Services](#module-1---introduction-to-amazon-web-services)</br>
-[- Module 2 - Compute in the cloud](#module-2---amazon-elastic-compute-cloud-amazon-ec2)</br>
-[- Module 3 - Global Infrastructure and Reliability](#module-3---global-infrastructure-and-reliability)</br>
+- [Module 1 - Introduction to Amazon Web Services](#module-1---introduction-to-amazon-web-services)</br>
+- [Module 2 - Compute in the cloud](#module-2---amazon-elastic-compute-cloud-amazon-ec2)</br>
+- [Module 3 - Global Infrastructure and Reliability](#module-3---global-infrastructure-and-reliability)</br>
 [- Module 4](#) NOT DONE</br>
 [- Module 5](#) NOT DONE</br>
 [- Module 6](#) NOT DONE</br>
@@ -242,10 +241,6 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 &emsp;AWS also counts with a CDN service called Amazon Cloundfront they are based on Edge locations to delivery a low latency communication between two distant client and server.</br>
 &emsp;The idea behind edge locations is to cache information from distance places. So, when someone needs to access data from an server that is too far, they can just request for the cached information on the edge locations.</br>
 
-### **Amazon Route 53**
-
-&emsp;Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. Route 53 connects user requests to Internet applications running on AWS or on-premises.</br>
-
 ### **AWS OutPosts**
 
 &emsp;AWS can also use AWS OutPosts to get AWS inside you business building. It means the AWS will install a new mini regions inside you business, to fulfill special needs that you might need. Using this tool AWS has completely operational control and hundred percent of AWS features will be available.</br>
@@ -270,6 +265,75 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 &emsp;With AWS CloudFormation you can use pre-determined templates to build an environment by writing lines of code instead of using the AWS Management Console. In this manner, you can treat your infrastructure as code by using tools as json's to describe your infrastructure in a declarative manner. </br>
 
 ---
+
+## **Module 4 - Networking**
+
+### **Introduction**
+
+&emsp;We don't want to everybody connect with ours resources at AWS data center. So, we gotta have services to control networking flowing at EC2 instances, databases and Elastic Load Balancing</br>
+
+### **Amazon VPC - Virtual Private Cloud**
+
+&emsp;To control access at AWS resources, we got VPC, capable of creating subnets and gates, thus making access private or public. There are 3 ways to connect the resources to the client, via network:</br>
+
+- Internet Gateway:</br>
+&emsp;Allows public traffic from the internet to access your VPC, you attach an internet gateway to the VPC.</br>
+
+- Private Gate:</br>
+&emsp;Allows protected internet traffic to enter into the VPC. That means only people authorized will have access.</br>
+
+- AWS Direct Connect:</br>
+&emsp;If you want low latency, you can choose AWS Direct Connect to get a dedicated network connected to AWS data centers. In this way, only people authorized will have access.</br>
+
+**PS: Only control access based on connection.
+
+#### **ACL's and Security Groups**
+
+&emsp;When connected to VPC, there are two more steps, until your packet really goes inside one EC2 instance and get processed.</br>
+&emsp;First, the packet needs to enter the subnet inside the VPC. When entering, the packet type and where did he came from will be checked by one ACL, per default, all packets are allowed to enter. ACL's are stateless, it means it wont remember who's allowed to get in, meaning that the packet will be checked when he enters the subnet and when he leaves the subnet.</br>
+&emsp;Inside the subnet, your packet needs to enter EC2 security group. Differently from the last one, this way to access is stateful, all the packets that enter the EC2 are on a security group and will be remembered on they way out, no need to check when leaving.
+</br>
+
+### **Amazon Route 53**
+
+&emsp;Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. Route 53 connects user requests to Internet applications running on AWS or on-premises. It converts the domain name to IP address so the user can connect it. It uses other informations, like Geographyc position to make the best IP possible to access with low latency..</br>
+
+## **Module 5 - Storage and Databases**
+
+### **Introduction**
+
+&emsp; Your business might have necessity of getting and storing information and data. AWS got you. </br>
+
+### **Amazon Elastic Block Store**
+
+&emsp;When starting a new EC2 instance, you can use EC2 own memory. This memory is temporary, and goes away as soon the instance is terminated. All memory is also stored in blocks.</br>
+&emsp; o, to fix that, AWS has EBS, that allow you to get memory from their hard drives. It keeps in a long term data, and its independent from EC2 life cycles.</br>
+
+#### **SnapShots**
+
+&emsp;The main reason for using the Amazon EBS is to keep your data persistent, this way you are going to need backups to have it successfully secure. Here is where the SnapShots came in, this is a backup service that you can use to make incremental backup's of your own data.</br>
+
+### **Amazon Simple Storage Service (Amazon S3)**
+
+&emsp; There is two kinds of storage, objects and blocks. The first one is defined by everything that you store is considered a complete object and treated like that, having the data, metadata and key. The bad thing about the object storage is when you need to update a specific part of you file, but you can't do it with this kind of storage. Object storage only allows you to send the whole object to update the last one, so if you have a large file to update, gonna have to send it all again, the service of AWS the provides this kind of storage is Amazon S3. To solve this problem, the second guy came's in, the block storage. With the block storage you can change a specific part of the file without having to re-upload the whole file again. </br>
+
+- S3 Standard:</br>
+&emsp;Nice option when need frequently accessed data, this guy is really useful of many use cases such as websites, content distribution, and data analytics. </br>
+
+- S3 Intelligent Tiering:</br>
+&emsp; Good choice when heaving files have changing access patterns. Amazon S3 will automatically move your file between the perfect accessing tiers types.</br>
+
+- S3 Glacier:</br>
+&emsp;Glacier is tier focused on retrieving data. In this tier type, you can choose based on how often do you retrieve data. Inside Glacier, you choose between the best tier. You can retrieve a data instantly, or within hours of upload.</br>
+
+- S3 Outposts:</br>
+&emsp;Amazon S3 Outposts delivers object storage to your on-premises AWS Outposts environment.</br>
+
+#### **Comparing Amazon EBS and Amazon S3**
+
+&emsp;EBS and S3 are two different ways to storage data. The main difference between thenz is that EBS works with block-type memory writing, when S3 works with object-type memory writing.</br>
+&emsp;When your gotta have heavy files that are always changing, go for EBS it will only change and upload the archive modified part. S3 will upload the hole new object every time a new part is modified.</br>
+&emsp;Also, S3 is very good at reading a lot of files, looking for something.
 
 ## **References**
 
