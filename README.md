@@ -14,14 +14,14 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 - [Module 1 - Introduction to Amazon Web Services](#module-1---introduction-to-amazon-web-services)</br>
 - [Module 2 - Compute in the cloud](#module-2---amazon-elastic-compute-cloud-amazon-ec2)</br>
 - [Module 3 - Global Infrastructure and Reliability](#module-3---global-infrastructure-and-reliability)</br>
-[- Module 4](#) NOT DONE</br>
-[- Module 5](#) NOT DONE</br>
-[- Module 6](#) NOT DONE</br>
-[- Module 7](#) NOT DONE</br>
-[- Module 8](#) NOT DONE</br>
-[- Module 9](#) NOT DONE</br>
-[- Module 10](#) NOT DONE</br>
-[- Module 11](#) NOT DONE</br>
+- [Module 4 - Networking](#module-4---networking)</br>
+- [Module 5- Storage and Databases](#module-5---storage-and-databases)</br>
+- [Module 6](#) NOT DONE</br>
+- [Module 7](#) NOT DONE</br>
+- [Module 8](#) NOT DONE</br>
+- [Module 9](#) NOT DONE</br>
+- [Module 10](#) NOT DONE</br>
+- [Module 11](#) NOT DONE</br>
 
 ---
 
@@ -307,7 +307,7 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 ### **Amazon Elastic Block Store**
 
 &emsp;When starting a new EC2 instance, you can use EC2 own memory. This memory is temporary, and goes away as soon the instance is terminated. All memory is also stored in blocks.</br>
-&emsp; o, to fix that, AWS has EBS, that allow you to get memory from their hard drives. It keeps in a long term data, and its independent from EC2 life cycles.</br>
+&emsp;To, to fix that, AWS has EBS, that allow you to get memory from their hard drives. It keeps in a long term data, and its independent from EC2 life cycles.</br>
 
 #### **SnapShots**
 
@@ -315,13 +315,13 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 
 ### **Amazon Simple Storage Service (Amazon S3)**
 
-&emsp; There is two kinds of storage, objects and blocks. The first one is defined by everything that you store is considered a complete object and treated like that, having the data, metadata and key. The bad thing about the object storage is when you need to update a specific part of you file, but you can't do it with this kind of storage. Object storage only allows you to send the whole object to update the last one, so if you have a large file to update, gonna have to send it all again, the service of AWS the provides this kind of storage is Amazon S3. To solve this problem, the second guy came's in, the block storage. With the block storage you can change a specific part of the file without having to re-upload the whole file again. </br>
+&emsp;There is two kinds of storage, objects and blocks. The first one is defined by everything that you store is considered a complete object and treated like that, having the data, metadata and key. The bad thing about the object storage is when you need to update a specific part of you file, but you can't do it with this kind of storage. Object storage only allows you to send the whole object to update the last one, so if you have a large file to update, gonna have to send it all again, the service of AWS the provides this kind of storage is Amazon S3. To solve this problem, the second guy came's in, the block storage. With the block storage you can change a specific part of the file without having to re-upload the whole file again. </br>
 
 - S3 Standard:</br>
 &emsp;Nice option when need frequently accessed data, this guy is really useful of many use cases such as websites, content distribution, and data analytics. </br>
 
 - S3 Intelligent Tiering:</br>
-&emsp; Good choice when heaving files have changing access patterns. Amazon S3 will automatically move your file between the perfect accessing tiers types.</br>
+&emsp;Good choice when heaving files have changing access patterns. Amazon S3 will automatically move your file between the perfect accessing tiers types.</br>
 
 - S3 Glacier:</br>
 &emsp;Glacier is tier focused on retrieving data. In this tier type, you can choose based on how often do you retrieve data. Inside Glacier, you choose between the best tier. You can retrieve a data instantly, or within hours of upload.</br>
@@ -333,7 +333,7 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 
 &emsp;EBS and S3 are two different ways to storage data. The main difference between thenz is that EBS works with block-type memory writing, when S3 works with object-type memory writing.</br>
 &emsp;When your gotta have heavy files that are always changing, go for EBS it will only change and upload the archive modified part. S3 will upload the hole new object every time a new part is modified.</br>
-&emsp;Also, S3 is very good at reading a lot of files, looking for something.
+&emsp;Also, S3 is very good at reading a lot of files, looking for something.</br>
 
 ## **References**
 
