@@ -4,8 +4,6 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 
 ## Authors
 
-- [Adrian Widmer](https://github.com/Awi-24)
-- [Antonio Horácio Magalhaes](https://github.com/antoniohoracio77)
 - [Fernando Antonio Marques Schettini](https://github.com/FernandoSchett)
 - [Orlando Mota Pires](https://github.com/orlandomotapires)
 
@@ -309,7 +307,7 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 ### **Amazon Elastic Block Store**
 
 &emsp;When starting a new EC2 instance, you can use EC2 own memory. This memory is temporary, and goes away as soon the instance is terminated. All memory is also stored in blocks.</br>
-&emsp; o, to fix that, AWS has EBS, that allow you to get memory from their hard drives. It keeps in a long term data, and its independent from EC2 life cycles.</br>
+&emsp;To, to fix that, AWS has EBS, that allow you to get memory from their hard drives. It keeps in a long term data, and its independent from EC2 life cycles.</br>
 
 #### **SnapShots**
 
