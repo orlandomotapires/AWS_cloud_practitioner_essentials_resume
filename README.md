@@ -10,14 +10,15 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 - [Orlando Mota Pires](https://github.com/orlandomotapires)
 
 ---
+
 ## Summary
 
-[- Module 1 - Introduction to Amazon Web Services](#module-1---introduction-to-amazon-web-services)</br>
-[- Module 2 - Compute in the cloud](#module-2---amazon-elastic-compute-cloud-amazon-ec2)</br>
-[- Module 3 - Global Infrastructure and Reliability](#module-3---global-infrastructure-and-reliability)</br>
-[- Module 4](#) NOT DONE</br>
-[- Module 5](#) NOT DONE</br>
-[- Module 6](#) NOT DONE</br>
+- [Module 1 - Introduction to Amazon Web Services](#module-1---introduction-to-amazon-web-services)</br>
+- [Module 2 - Compute in the cloud](#module-2---amazon-elastic-compute-cloud-amazon-ec2)</br>
+- [Module 3 - Global Infrastructure and Reliability](#module-3---global-infrastructure-and-reliability)</br>
+- [Module 4 - Networking](#module-4---networking)</br>
+- [Module 5 - Storage and Databases](#module-5---storage-and-databases)</br>
+- [Module 6 - Security](#module-6---security)</br>
 [- Module 7](#) NOT DONE</br>
 [- Module 8](#) NOT DONE</br>
 [- Module 9](#) NOT DONE</br>
@@ -242,10 +243,6 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 &emsp;AWS also counts with a CDN service called Amazon Cloundfront they are based on Edge locations to delivery a low latency communication between two distant client and server.</br>
 &emsp;The idea behind edge locations is to cache information from distance places. So, when someone needs to access data from an server that is too far, they can just request for the cached information on the edge locations.</br>
 
-### **Amazon Route 53**
-
-&emsp;Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. Route 53 connects user requests to Internet applications running on AWS or on-premises.</br>
-
 ### **AWS OutPosts**
 
 &emsp;AWS can also use AWS OutPosts to get AWS inside you business building. It means the AWS will install a new mini regions inside you business, to fulfill special needs that you might need. Using this tool AWS has completely operational control and hundred percent of AWS features will be available.</br>
@@ -270,6 +267,151 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 &emsp;With AWS CloudFormation you can use pre-determined templates to build an environment by writing lines of code instead of using the AWS Management Console. In this manner, you can treat your infrastructure as code by using tools as json's to describe your infrastructure in a declarative manner. </br>
 
 ---
+
+## **Module 4 - Networking**
+
+### **Introduction**
+
+&emsp;We don't want to everybody connect with ours resources at AWS data center. So, we gotta have services to control networking flowing at EC2 instances, databases and Elastic Load Balancing</br>
+
+### **Amazon VPC - Virtual Private Cloud**
+
+&emsp;To control access at AWS resources, we got VPC, capable of creating subnets and gates, thus making access private or public. There are 3 ways to connect the resources to the client, via network:</br>
+
+- Internet Gateway:</br>
+&emsp;Allows public traffic from the internet to access your VPC, you attach an internet gateway to the VPC.</br>
+
+- Private Gate:</br>
+&emsp;Allows protected internet traffic to enter into the VPC. That means only people authorized will have access.</br>
+
+- AWS Direct Connect:</br>
+&emsp;If you want low latency, you can choose AWS Direct Connect to get a dedicated network connected to AWS data centers. In this way, only people authorized will have access.</br>
+
+**PS: Only control access based on connection.
+
+#### **ACL's and Security Groups**
+
+&emsp;When connected to VPC, there are two more steps, until your packet really goes inside one EC2 instance and get processed.</br>
+&emsp;First, the packet needs to enter the subnet inside the VPC. When entering, the packet type and where did he came from will be checked by one ACL, per default, all packets are allowed to enter. ACL's are stateless, it means it wont remember who's allowed to get in, meaning that the packet will be checked when he enters the subnet and when he leaves the subnet.</br>
+&emsp;Inside the subnet, your packet needs to enter EC2 security group. Differently from the last one, this way to access is stateful, all the packets that enter the EC2 are on a security group and will be remembered on they way out, no need to check when leaving.
+</br>
+
+### **Amazon Route 53**
+
+&emsp;Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. Route 53 connects user requests to Internet applications running on AWS or on-premises. It converts the domain name to IP address so the user can connect it. It uses other informations, like Geographyc position to make the best IP possible to access with low latency..</br>
+
+## **Module 5 - Storage and Databases**
+
+### **Introduction**
+
+&emsp; Your business might have necessity of getting and storing information and data. AWS got you. </br>
+
+### **Amazon Elastic Block Store**
+
+&emsp;When starting a new EC2 instance, you can use EC2 own memory. This memory is temporary, and goes away as soon the instance is terminated. All memory is also stored in blocks.</br>
+&emsp; o, to fix that, AWS has EBS, that allow you to get memory from their hard drives. It keeps in a long term data, and its independent from EC2 life cycles.</br>
+
+#### **SnapShots**
+
+&emsp;The main reason for using the Amazon EBS is to keep your data persistent, this way you are going to need backups to have it successfully secure. Here is where the SnapShots came in, this is a backup service that you can use to make incremental backup's of your own data.</br>
+
+### **Amazon Simple Storage Service (Amazon S3)**
+
+&emsp; There is two kinds of storage, objects and blocks. The first one is defined by everything that you store is considered a complete object and treated like that, having the data, metadata and key. The bad thing about the object storage is when you need to update a specific part of you file, but you can't do it with this kind of storage. Object storage only allows you to send the whole object to update the last one, so if you have a large file to update, gonna have to send it all again, the service of AWS the provides this kind of storage is Amazon S3. To solve this problem, the second guy came's in, the block storage. With the block storage you can change a specific part of the file without having to re-upload the whole file again. </br>
+
+- S3 Standard:</br>
+&emsp;Nice option when need frequently accessed data, this guy is really useful of many use cases such as websites, content distribution, and data analytics. </br>
+
+- S3 Intelligent Tiering:</br>
+&emsp; Good choice when heaving files have changing access patterns. Amazon S3 will automatically move your file between the perfect accessing tiers types.</br>
+
+- S3 Glacier:</br>
+&emsp;Glacier is tier focused on retrieving data. In this tier type, you can choose based on how often do you retrieve data. Inside Glacier, you choose between the best tier. You can retrieve a data instantly, or within hours of upload.</br>
+
+- S3 Outposts:</br>
+&emsp;Amazon S3 Outposts delivers object storage to your on-premises AWS Outposts environment.</br>
+
+#### **Comparing Amazon EBS and Amazon S3**
+
+&emsp;EBS and S3 are two different ways to storage data. The main difference between thenz is that EBS works with block-type memory writing, when S3 works with object-type memory writing.</br>
+&emsp;When your gotta have heavy files that are always changing, go for EBS it will only change and upload the archive modified part. S3 will upload the hole new object every time a new part is modified.</br>
+&emsp;Also, S3 is very good at reading a lot of files, looking for something.</br>
+
+### **Amazon Elastic File System (Amazon EFS)**
+
+&emsp;Amazon EFS is another service for data storage. Differently from Amazon EBS and Amazon S3 it's based on files, not blocks or objects, and it's main purpose is to be accessible from any EC2 instance at the region, writing and reading at the same time. Also, than storage will be dynamically adjusted for the amount of data necessary.</br>
+
+### **Amazon Relational Database Service (Amazon RDS)**
+
+&emsp;Amazon RDS can provide the classic relational way to store data in databases, it means that the data will be stored with services such as hardware provisioning, database setup, patching, and backups. The engines that RDS uses are the most common used in the market, they can be PostgreSQL, MySQL, MariaDB, OracleDatabase, Microsoft SQL Server, Amazon Aurora and so on. Other feature provides by RDS is integrating Amazon RDS with other services to fulfill your business and operational needs. </br>
+
+#### **Amazon Aurora**
+
+&emsp;Amazon Aurora is an enterprise-class relational database.It Reduces unnecessary input/output (I/O) operations, while ensuring that your database resources remain reliable and available. </br>
+
+### **Amazon DynamoDB**
+
+&emsp; Amazon DynamoDB is a nonrelational database or "NoSQL databases", it means that DynamoDB don't use the classic SQL to manipulate the data, one type of structural approach for nonrelational databases is key-value pairs. It's serverless and has automatic scaling, it means that you don't have to provision, patch or manage services, and no need to keep a eye on the scaling.</br>
+
+#### **Comparing Amazon EDS and Amazon DynamoDB**
+
+&emsp; Comparing the two Amazon data management services, we can simplify: use RDS when you need to relate data have and recovery provided. Use DynamoDB when you need high scalability, capable of millions of access at a short period of time, standardized data
+ data and your data doesn't need to be related at all.</br>
+
+### **Amazon Redshift**
+
+&emsp;Amazon Redshift is a data warehousing service that you can use for big data analytics. It offers the ability to collect data from many sources and helps you to understand relationships and trends across your data.</br>
+
+### **AWS Database Migration Service (AWS DMS)**
+
+&emsp;With AWS DMS, you move data between a source database and a target database. The source and target databases can be of the same type or different types. During the migration, your source database remains operational, reducing downtime for any applications that rely on the database. </br>
+&emsp;You can also combining several databases into a single database, test applications against production data without affecting production users and send ongoing copies of your data to other target sources instead of doing a one-time migration.</br>
+
+### **Additional database services**
+
+&emsp;There are more databases type, each one specific for the type of work<br you're gonna need. Here are some examples:</br>
+
+- Amazon Document DB:</br>
+&emsp;Amazon Document DB is a service that enable you to store JSON files and manage them in a easy way, simplifying the architecture.</br>
+
+- Amazon Neptune:</br>
+&emsp;Amazon Neptune is a graph based database, it is really useful at social media and recommendation systems. Differently from the others services that uses SQL and NoSQL this guy uses SPARQL, a standardized language for querying RDF graphs. </br>
+
+- Amazon Managed Blockchain:</br>
+&emsp; A service that you can use to create and manage blockchain networks with open-source frameworks, also good for banking due to immutability.</br>
+
+- Amazon Quantum Ledger Database (Amazon QLDB):</br>
+&emsp; Use it when you need a complete history of all the changes that have been made to your application data, good for banking, where you need to register all changes and large amounts of data.</br>
+
+- Amazon ElastiCache:</br>
+&emsp; It's one type of database accelerator, were you can pay for more performance, adding more cache to database systems, improving the read times of common requests. . </br>
+
+- Amazon DynamoDB Accelerator (DAX):</br>
+&emsp;Other database accelerator, build specifically for DynamoDB and also cache based.</br>
+
+## **Module 6 - Security**
+
+### **Introduction**
+
+&emsp;Of course, when are you talking about a service, security its a key problem. So security is thing guaranteed by AWS and the user, each one with your own responsibility.</br>
+
+### **Shared responsibility model**
+
+&emsp;The shared responsibility model divides into customer responsibilities (commonly referred to as “security in the cloud”) and AWS responsibilities (commonly referred to as “security of the cloud”).</br>
+&emsp;You can think of this model as being similar to the division of responsibilities between a homeowner and a homebuilding. The builder (AWS) is responsible for constructing your house and ensuring that it is solidly built. As the homeowner (the customer), it is your responsibility to secure everything in the house by ensuring that the doors are closed and locked. </br>
+
+<div align="center">
+    <img height = "250em" src = "./assets/ResponsabillityModel.png"/>
+    <strong>Figure 1 - AWS Figure Model</strong> 
+</div></br>
+
+- Customers Responsibilities:</br>
+&emsp;You as a costumer has to manage the data IN the cloud. You are responsible for managing security requirements for your content, including which content you choose to store on AWS, which AWS services you use, and who has access to that content. You also control how access rights are granted, managed, and revoked. In general the costumers responsibility is on data, application and operating system.</br>
+
+- AWS Responsibilities:</br>
+&emsp;Guards, energy and all things related to physical maintenance of AWS data centers are AWS responsibilities. As well as network security, and HyperVisor administration inside AWS servers.</br>
+
+&emsp;This way, you are responsible for security in the cloud while AWS is responsible for security of the cloud.</br>
 
 ## **References**
 
