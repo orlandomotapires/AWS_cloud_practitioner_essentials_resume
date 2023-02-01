@@ -399,7 +399,7 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 &emsp;You can think of this model as being similar to the division of responsibilities between a homeowner and a homebuilding. The builder (AWS) is responsible for constructing your house and ensuring that it is solidly built. As the homeowner (the customer), it is your responsibility to secure everything in the house by ensuring that the doors are closed and locked. </br>
 
 <div align="center">
-    <img height = "250em" src = "./assets/ResponsabillityModel.png"/>
+    <img height = "250em" src = "./assets/ResponsabillityModel.png"/></br>
     <strong>Figure 1 - AWS Figure Model</strong> 
 </div></br>
 
