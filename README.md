@@ -411,6 +411,68 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 
 &emsp;This way, you are responsible for security in the cloud while AWS is responsible for security of the cloud.</br>
 
+### **User permissions and access (IAM)**
+
+&emsp;AWS Identity and Access Management (IAM) its another AWS service and enables you to manage access to AWS services and resources securely. When creating your AWS account, there are some entities you have to manage with the best practices to ensure security. They are:</br>
+
+- IAM Users:</br>
+&emsp;When you create your AWS, your logged with root user. This user has all permissions allowed by default. Do not use the root user for everyday tasks. Instead, use the root user to create your first IAM user and assign it permissions to create other users.</br>
+&emsp;Its recommended that you create individual IAM users for each person who needs to access AWS and that you enable Multi-factor authentication to get another security layer based on a code received by a specific device.</br>  
+
+- IAM Policies:</br>
+&emsp;An IAM policy is a document that allows or denies permissions to AWS services and resources. You can also manage the level of that access you granted to a specific user, group or even a role. When setting the privileges that a certain policy will have it's necessary to look ate the best practice, in this case is to follow the security principle of least privilege when granting permissions. By following this principle, you help to prevent users or roles from having more permissions than needed to perform their tasks. </br>
+
+- IAM Groups:</br>
+&emsp;IAM Group is a group of users, when you assign an IAM policy to a group, all users in the group are granted permissions specified by the policy. Instead of assigning permissions to users one at a time, the owner can create a "Developers" IAM group.</br>
+
+- IAM Roles:</br>
+&emsp;An IAM role is an identity that an user can assume to gain temporary access to permissions. Its used to users that need to get access to different resources temporarily, instead of long-term for each type of job.</br>
+
+### **AWS Organizations**
+
+&emsp;AWS Organizations are another AWS service to manage different accounts. Differently from IAM that works with users in the same account, this service works managing different AWS accounts.</br>
+&emsp;You can centrally control permissions for the accounts in your organization by using service control policies (SCPs). SCPs enable you to place restrictions on the AWS resources for different accounts.</br>
+&emsp;In AWS Organizations, you can group accounts into organizational units (OUs) to make it easier to manage accounts with similar business or security requirements. When you apply a policy to an OU, all the accounts in the OU automatically inherit the permissions specified in the policy.</br>
+
+### **AWS Artifact**
+
+&emsp;You can use AWS Artifact for 2 main reasons, Agreements or Reports. With Agreements you can review, accept, and manage different types of agreements for an individual account and for all your accounts in AWS Organizations based on your business needs.</br>
+&emsp;With the AWS Artifact Reports, you are able to get more information about your responsibility for complying with certain regulatory standards. Reports provide compliance reports from third-party auditors. These auditors have tested and verified that AWS is compliant with a variety of global, regional, and industry-specific security standards and regulations.</br>
+&emsp;You can also contact Customer Compliance Center that contains resources to help you learn more about AWS compliance and have access to compliance whitepapers and documentation and a auditor learning path.</br>
+
+#### **Customer Compliance Center**
+
+&emsp;The Customer Compliance Center contains resources to help you learn more about AWS compliance. In the Customer Compliance Center, you can read customer compliance stories to discover how companies in regulated industries have solved various compliance, governance, and audit challenges.</br>
+
+### **Denial-of-service attacks**
+
+&emsp;A denial-of-service (DoS) attack is a deliberate attempt to make a website or application unavailable to users. We have a lot of DDoS attack types:</br>
+
+- Distributed denial-of-service attacks:</br>
+&emsp;They are the most common, they happen when a lot of machines requests things from your application, overloading it. Usually, they use zombies typed machines. AWS prepared AWS Shield, who's responsible for protect your applications against this type of DDoS.</br>
+
+- UDP Flood: </br>
+&emsp;This DDos Attack is based on using a public service to overload the application. For example let's think about a weather service, you can send request to get information about the weather and the application will send you a bunch of data. If a hacker send a request to the application and set your IP to receive the response, your application might get overloaded by the massive amount of data the application is returning. AWS has already a solution for this kind of problem, the Security Groups. With the Security Groups you can set witch requests is going to be accepted or not, avoiding the UDP Flood attack. </br>
+
+- Slowloris Attack:</br>
+&emsp;This attack happens when a hacker send a request to the application. The request goes with low latency (lagged) on purpose, because of that it also prevents other requests to be done. Elastic Load Balancer its the solution for this attack, because ELB waits for the entire request to be done, managing the requests.</br>
+
+### **AWS Key Management Service (AWS KMS)**
+
+&emsp;AWS Key Management Service (AWS KMS) enables you to perform encryption operations through the use of cryptographic keys. A cryptographic key is a random string of digits used for locking (encrypting) and unlocking (decrypting) data. You can use AWS KMS to create, manage, and use cryptographic keys. You can also control the use of keys across a wide range of services and in your applications. With AWS KMS, you can choose the specific levels of access control that you need for your keys. With AWS KMS, you can choose the specific levels of access control that you need for your keys. For example, you can specify which IAM users and roles are able to manage keys.</br>
+
+### **AWS WAF**
+
+&emsp;AWS WAF is a web application firewall that lets you monitor network requests that come into your web applications. AWS WAF works together with Amazon CloudFront and an Application Load Balancer and works with a access control list that has all the blocked ip's listed, whenever a request comes, the WAF is able to check if that IP is on the block list.</br>
+
+### **Amazon Inspector**
+
+&emsp;To perform automated security assessments on your applications, you can use Amazon Inspector. Inspector is another AWS service that by runs automated security assessments generating a list of security findings each one with recommendation for how to fix it.</br>
+
+### **Amazon GuardDuty**
+
+&emsp; GuardDuty is another autonomous service for monitoring your AWS account and network. You can review detailed findings about them from the AWS Management Console. AWS Lambda functions can be triggered as soon as GuardDuty finds threats.</br>
+
 ## **References**
 
 1. <https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials?src=detail2>
