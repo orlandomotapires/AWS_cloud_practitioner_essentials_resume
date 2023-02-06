@@ -17,11 +17,11 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 - [Module 4 - Networking](#module-4---networking)</br>
 - [Module 5 - Storage and Databases](#module-5---storage-and-databases)</br>
 - [Module 6 - Security](#module-6---security)</br>
-[- Module 7](#) NOT DONE</br>
-[- Module 8](#) NOT DONE</br>
-[- Module 9](#) NOT DONE</br>
-[- Module 10](#) NOT DONE</br>
-[- Module 11](#) NOT DONE</br>
+- [ Module 7 - Monitoring and Analytics](#module-7---monitoring-and-analytics)</br>
+- [Module 8 - Pricing and Support](#module-8---pricing-and-support) </br>
+- [Module 9](#) NOT DONE</br>
+- [Module 10](#) NOT DONE</br>
+- [Module 11](#) NOT DONE</br>
 
 ---
 
@@ -472,6 +472,32 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 ### **Amazon GuardDuty**
 
 &emsp; GuardDuty is another autonomous service for monitoring your AWS account and network. You can review detailed findings about them from the AWS Management Console. AWS Lambda functions can be triggered as soon as GuardDuty finds threats.</br>
+
+## **Module 7 - Monitoring and Analytics**
+
+### **Introduction**
+
+&emsp;It's important to have monitoring tools to check how your system is doing during the day, and based on that take actions to get better performance and troubleshooting.</br>
+
+### **Amazon CloudWatch**
+
+&emsp;Amazon CloudWatch is a web service that enables you to monitor and manage various metrics and configure alarm actions based on data from those metrics.</br>
+&emsp;With CloudWatch you can set alarms to send notifications about your instances when, for example, the CPU use percentage is over 80%, the temperature is too high. You can also use the CloudWatch to create a complete dashboard with many information about your business, aggregating all information in just one place.</br>
+&emsp;In that way, you gain visibility over your system improving mean time to resolution and total costumer ownership.</br>
+
+### **AWS CloudTrail**
+
+&emsp;AWS CloudTrail records API calls for your account. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, and more. Events are typically updated in CloudTrail within 15 minutes after an API call.</br>
+&emsp;Within CloudTrail, you can also enable CloudTrail Insights. This optional feature allows CloudTrail to automatically detect unusual API activities in your AWS account.</br>
+
+### **AWS Trusted Advisor**
+
+&emsp;AWS Trusted Advisor is a web service that inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices. It will warn you if something is wrong, with security, fault tolerance, performance, cost optimization and service limits.</br>
+
+## **Module 8 - Pricing and Support**
+
+### **Introduction**
+
 
 ## **References**
 
