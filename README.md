@@ -19,7 +19,7 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 - [Module 6 - Security](#module-6---security)</br>
 - [ Module 7 - Monitoring and Analytics](#module-7---monitoring-and-analytics)</br>
 - [Module 8 - Pricing and Support](#module-8---pricing-and-support) </br>
-- [Module 9](#) NOT DONE</br>
+- [Module 9 - Migra](#) NOT DONE</br>
 - [Module 10](#) NOT DONE</br>
 - [Module 11](#) NOT DONE</br>
 
@@ -498,6 +498,55 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 
 ### **Introduction**
 
+&emsp;This module talks about pricing in each AWS resource and service. It's important to know exactly how much you're gonna pay for AWS Cloud Services.</br>
+
+### **AWS Free Tier**
+
+&emsp;AWS offers some free services, under some policies: "Always Free", "12 Months Free" and "Trials". They are goos for testing AWS services and trying get you downscale projects in cloud. </br>
+
+### **AWS Pricing and Expense Control**
+
+&emsp;In general, AWS has three types of pricing:</br>
+
+- Pay for what you use:</br>
+&emsp;For each service, you pay for exactly the amount of resources that you actually use, without requiring long-term contracts or complex licensing.  </br>
+
+- Pay less when you reserve:</br>
+&emsp;AWS offers you a discount if you reserve a service.</br>
+
+- Pay less with volume-based discounts when you use more:</br>
+&emsp;Some services offer tiered pricing, so the per-unit cost is incrementally lower with increased usage. More you use, more discount you get.</br>
+
+&emsp;Based on these concepts, you can use AWS Pricing Calculator to get a estimate for the cost of your case uses. And use Billing dashboard to know where exactly you're spending your money and use AWS Budgets to plan your service usage, service costs, and instance reservations.</br>
+&emsp;For example, EC2 you pay for only the compute time that you use while your instances are running, with Amazon S3 the number of requests to add, copy or retrieve objects into a bucket and the space of storage space used counts for the pricing and with AWS Lambda, you are charged based on the number of requests for your functions and the time that it takes for them to run.</br>
+&emsp;AWS has Consolidated billing feature, it means that if a company has more than one account, they can use this feature to get a single bill from all accounts. Consolidated billing also has the capability track each account expenses and usage.</br>
+&emsp;If you're still having trouble with money expending, you CAN use AWS Cost Explorer to see your costs visualize, understand, and manage your AWS costs and usage over time.</br>
+
+### **AWS Support plans**
+
+&emsp;There are five supports plans that you as a costumer can use to get support from AWS.</br>
+
+- Basic:</br>
+&emsp;Its free for all AWS customers. Access to whitepapers, documentation, AWS Personal Health Dashboard and support communities. With Basic Support, you can also contact AWS for billing questions and service limit increases. But you have access to a limited selection of AWS Trusted Advisor checks.</br>
+
+- Developer:</br>
+&emsp;Best practice guidance, client-side diagnostic tools and Building-block architecture support, which consists of guidance for how to use AWS offerings, features, and services together.</br>
+
+- Business:</br>
+&emsp;Use-case guidance to identify AWS offerings, features, and services that can best support your specific needs, all AWS Trusted Advisor checks, limited support for third-party software, such as common operating systems and application stack components.</br>
+
+- Enterprise On-Ramp:</br>
+&emsp;A pool of Technical Account Managers to provide proactive guidance and coordinate access to programs and AWS experts, a Cost Optimization workshop (one per year), a Concierge support team for billing and account assistance, tools to monitor costs and performance through Trusted Advisor and Health API/Dashboard, consultative review and architecture guidance (one per year),infrastructure Event Management support (one per year), support automation workflows,30 minutes or less response time for business-critical issues</br>
+
+- Enterprise Support:</br>
+&emsp;In addition to all features included in the Basic, Developer, Business, and Enterprise On-Ramp support plans, customers with Enterprise Support have access to a designated Technical Account Manager, a Concierge support team, Operations Reviews and tools, Training and Game Days and Tools to monitor costs and performance through Trusted Advisor and Health API/Dashboard. </br>
+&emsp;The Enterprise plan also provides full access to proactive services, which are provided by a designated Technical Account Manager, some examples are Consultative review and architecture guidance, Infrastructure Event Management support, Cost Optimization Workshop and tools, Support automation workflows, 15 minutes or less response time for business-critical issues.</br>
+
+**PS: All pay-by-the-month plans have the benefits of Basic plan.**
+
+### **AWS Marketplace**
+
+&emsp;AWS Marketplace is a digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS. Play Stored Like, AWS Marketplace offers products in several categories, such as DevOps, Data Products Professional Services Business Applications and so on. </br>
 
 ## **References**
 
