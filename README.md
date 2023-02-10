@@ -19,12 +19,9 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 - [Module 6 - Security](#module-6---security)</br>
 - [ Module 7 - Monitoring and Analytics](#module-7---monitoring-and-analytics)</br>
 - [Module 8 - Pricing and Support](#module-8---pricing-and-support) </br>
-- [Module 9 - Migra](#) NOT DONE</br>
-- [Module 10](#) NOT DONE</br>
-- [Module 11](#) NOT DONE</br>
-
+- [Module 9 - Migration and Innovation](#module-9---migration-and-innovation)</br>
+- [Module 10 - The Cloud Journey](#module-10---the-cloud-journey)</br>
 ---
-
 ## **Module 1 - Introduction to Amazon Web Services**
 
 ### **Introduction**
@@ -547,6 +544,87 @@ This is a resume of our studies at AWS Cloud Practitioner Essentials training. A
 ### **AWS Marketplace**
 
 &emsp;AWS Marketplace is a digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS. Play Stored Like, AWS Marketplace offers products in several categories, such as DevOps, Data Products Professional Services Business Applications and so on. </br>
+
+## **Module 9 - Migration and Innovation**
+
+### **Introduction**
+
+&emsp;If you already have your on-premises database and want to put your migrate into cloud, the AWS can help  you. AWS has a whole sector responsible for those migrations, so you can easily migrate your on-premises and save money.</br>
+
+### **AWS Cloud Adoption Framework (AWS CAF)**
+
+&emsp;AWS CAF its an document that give guidance to someone that wats to migrate their system to cloud services. In general, he focus in six core perspectives, they are:</br>
+
+- Business:</br>
+&emsp;The Business Perspective ensures that IT aligns with business needs and that IT investments link to key business results. This Perspective is focused on people that think about the business itself.</br>
+
+- People:</br>
+&emsp;Generally people that work in your company related to people management and human resources.</br>
+
+- Governance:</br>
+&emsp;When talking about the governance, the AWS wants to align the IT strategy with business strategy. It results in less risks and maximize the business. Use the Governance Perspective to understand how to update the staff skills and processes necessary to ensure business governance in the cloud. Manage and measure cloud investments to evaluate business outcomes.</br>
+
+- Platform:</br>
+&emsp;The Platform Perspective includes principles and patterns for implementing new solutions on the cloud, and migrating on-premises workloads to the cloud. Its about technology and development.</br>
+
+- Security:</br>
+&emsp;The Security Perspective ensures that the organization meets security objectives for visibility, audibility, control, and agility.</br>
+
+- Operations:</br>
+&emsp;The Operations Perspective helps you to enable, run, use, operate, and recover IT workloads to the level agreed upon with your business stakeholders.</br>
+
+### **Migration strategies**
+
+- Rehosting:</br>
+&emsp;Rehosting also known as “lift-and-shift” involves moving applications without changes. It means the whole application is gonna move to another host, this is very common on large legacy systems.</br>
+
+- Replatforming:</br>
+&emsp;Replatforming, also known as “lift, tinker, and shift,” involves making a few cloud optimizations to realize a tangible benefit. This strategy is the rehosting with a middle-step in.</br>
+
+- Refactoring/re-architecting:</br>
+&emsp;Involves re-imagining how an application is architected and developed by using cloud-native features.</br>
+
+- Repurchasing:</br>
+&emsp;Involves moving from a traditional license to a software-as-a-service model. </br>
+
+- Retaining:</br>
+&emsp;Consists of keeping applications that are critical for the business in the source environment.</br>
+
+- Retiring:</br>
+&emsp;The process of removing applications that are no longer needed.</br>
+
+### **Snow Family**
+
+&emsp;The AWS Snow Family is a collection of physical devices that help to physically transport up to exabytes of data into and out of AWS. There are three different models, varying their physical and logical size, SnowCone, SnowBall and Snowmobile. Snowmobile consists in a fucking truck carrying data from place to place.</br>
+&emsp;Its more expense then transferring data with normal network but its also more effective.</br>
+
+## **Module 10 - The Cloud Journey**
+
+### **Introduction**
+
+&emsp;In this module we are gonna talk about many best practices and the cloud pillars.</br>
+
+## **The AWS Well-Architected Framework**
+
+&emsp; There are six pillars that determine if you architected a good cloud infrastructure: </br>
+
+- Operational excellence:</br>
+&emsp; Operational excellence is the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.</br>
+
+- Security:</br>
+&emsp;The Security pillar is the ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies. </br>
+
+- Reliability:</br>
+&emsp;Is the ability to recover from disruptions, meet demand from the application in real time and mitigate disruptions.</br>
+
+- Performance efficiency:</br>
+&emsp;Performance efficiency is the ability to use computing resources efficiently to meet system requirements and to maintain that efficiency as demand changes and technologies evolve</br>
+
+- Cost optimization:</br>
+&emsp;Cost optimization is the ability to run systems to deliver business value at the lowest price point.</br>
+
+- Sustainability:</br>
+&emsp;Sustainability is the ability to continually improve resource consumption from the planet.</br>
 
 ## **References**
 
