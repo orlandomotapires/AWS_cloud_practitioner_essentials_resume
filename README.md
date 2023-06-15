@@ -2,7 +2,7 @@
 
 <div align="center">
 	<a href="link_for_webite">
-	<img height = "250em" src = "https://github.com/orlandomotapires/AWS-Cloud-Practitioner-Essentials-Resume/assets/80331486/b80cb611-90d4-456b-b3c0-e45df94b0a80" />
+	<img height = "250em" src = "https://github.com/orlandomotapires/AWS-Cloud-Practitioner-Essentials-Resume/assets/80331486/dc304c19-471b-4a6a-98ec-00792eb4f20f" />
     </a>
 </div>
 
