@@ -1,13 +1,19 @@
-# AWS-Cloud-Practitioner-Essentials-Resume
+<h1 align="center">☁️ AWS Cloud Practitioner Essentials Resume ☁️</h1>
 
-This is a resume of our studies at AWS Cloud Practitioner Essentials training. All training is free and its available [here](https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials?src=detail2).
+<div align="center">
+	<a href="link_for_webite">
+	<img height = "250em" src = "https://github.com/orlandomotapires/AWS-Cloud-Practitioner-Essentials-Resume/assets/80331486/b80cb611-90d4-456b-b3c0-e45df94b0a80" />
+    </a>
+</div>
 
 ## Authors
 
-- [Fernando Antonio Marques Schettini](https://github.com/FernandoSchett)
-- [Orlando Mota Pires](https://github.com/orlandomotapires)
+- [Fernando Antonio Marques Schettini](https://github.com/FernandoSchett).
+- [Orlando Mota Pires](https://github.com/orlandomotapires).
 
----
+## About
+
+This repository contains the resume for [AWS Cloud Course](https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials?src=detail2), offering a comprehensive understanding of AWS cloud and its various services. The course covers key concepts, best practices, and practical implementations of AWS solutions.
 
 ## Summary
 
