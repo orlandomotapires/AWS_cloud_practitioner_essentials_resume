@@ -6,16 +6,16 @@
     </a>
 </div>
 
-## Authors
+## Authors 💻:
 
 - [Fernando Antonio Marques Schettini](https://github.com/FernandoSchett).
 - [Orlando Mota Pires](https://github.com/orlandomotapires).
 
-## About
+## About 🤔:
 
 This repository contains the resume for [AWS Cloud Course](https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials?src=detail2), offering a comprehensive understanding of AWS cloud and its various services. The course covers key concepts, best practices, and practical implementations of AWS solutions.
 
-## Summary
+## Summary 📝:
 
 - [Module 1 - Introduction to Amazon Web Services](#module-1---introduction-to-amazon-web-services)</br>
 - [Module 2 - Compute in the cloud](#module-2---amazon-elastic-compute-cloud-amazon-ec2)</br>
@@ -23,7 +23,7 @@ This repository contains the resume for [AWS Cloud Course](https://explore.skill
 - [Module 4 - Networking](#module-4---networking)</br>
 - [Module 5 - Storage and Databases](#module-5---storage-and-databases)</br>
 - [Module 6 - Security](#module-6---security)</br>
-- [ Module 7 - Monitoring and Analytics](#module-7---monitoring-and-analytics)</br>
+- [Module 7 - Monitoring and Analytics](#module-7---monitoring-and-analytics)</br>
 - [Module 8 - Pricing and Support](#module-8---pricing-and-support) </br>
 - [Module 9 - Migration and Innovation](#module-9---migration-and-innovation)</br>
 - [Module 10 - The Cloud Journey](#module-10---the-cloud-journey)</br>
@@ -632,8 +632,12 @@ This repository contains the resume for [AWS Cloud Course](https://explore.skill
 - Sustainability:</br>
 &emsp;Sustainability is the ability to continually improve resource consumption from the planet.</br>
 
-## **References**
+## References 📙:
 
-1. <https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials?src=detail2>
+[1] AWS. AWS Cloud Practitioner Essentials. Available at: https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials?src=detail2. Accessed on: June 15, 2023.
 
-2. <https://www.youtube.com/watch?v=FZR0rG3HKIk&ab_channel=IBMTechnology>
+[2] IBM Technology. "Introducing IBM Watson - How it Works." YouTube, September 20, 2017. Available at: https://www.youtube.com/watch?v=FZR0rG3HKIk&ab_channel=IBMTechnology. Accessed on: June 15, 2023.
+
+## Licence 📜:
+
+[Apache V2](https://choosealicense.com/licenses/apache-2.0/)
